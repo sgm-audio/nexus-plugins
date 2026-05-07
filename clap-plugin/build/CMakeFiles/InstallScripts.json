@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/SGM/dev/Nexus/clap_plugin/build/cmake_install.cmake",
+		"/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

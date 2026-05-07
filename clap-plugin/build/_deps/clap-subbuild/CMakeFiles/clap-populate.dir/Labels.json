@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles/clap-populate"
+		},
+		{
+			"file" : "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles/clap-populate.rule"
+		},
+		{
+			"file" : "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles/clap-populate-complete.rule"
+		},
+		{
+			"file" : "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-build.rule"
+		},
+		{
+			"file" : "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-configure.rule"
+		},
+		{
+			"file" : "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-download.rule"
+		},
+		{
+			"file" : "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-install.rule"
+		},
+		{
+			"file" : "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-mkdir.rule"
+		},
+		{
+			"file" : "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-patch.rule"
+		},
+		{
+			"file" : "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-test.rule"
+		},
+		{
+			"file" : "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"clap-populate"
+		],
+		"name" : "clap-populate"
+	}
+}

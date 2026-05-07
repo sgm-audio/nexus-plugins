@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,--dependency-file=CMakeFiles/mamba_compressor.dir/link.d  -o MambaCompressor.clap CMakeFiles/mamba_compressor.dir/src/mamba_compressor.cpp.o
