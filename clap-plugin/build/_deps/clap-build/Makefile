@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/SGM/dev/Nexus/clap_plugin
+CMAKE_SOURCE_DIR = /var/home/SGM/dev/Nexus-Plugins/clap-plugin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/SGM/dev/Nexus/clap_plugin/build
+CMAKE_BINARY_DIR = /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/SGM/dev/Nexus/clap_plugin/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/SGM/dev/Nexus/clap_plugin/build/CMakeFiles /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build//CMakeFiles/progress.marks
-	cd /home/SGM/dev/Nexus/clap_plugin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/clap-build/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/SGM/dev/Nexus/clap_plugin/build/CMakeFiles 0
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build && $(CMAKE_COMMAND) -E cmake_progress_start /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/CMakeFiles /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build//CMakeFiles/progress.marks
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/clap-build/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/SGM/dev/Nexus/clap_plugin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/clap-build/clean
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/clap-build/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/SGM/dev/Nexus/clap_plugin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/clap-build/preinstall
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/clap-build/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/SGM/dev/Nexus/clap_plugin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/clap-build/preinstall
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/clap-build/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/SGM/dev/Nexus/clap_plugin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 _deps/clap-build/CMakeFiles/clap-tests.dir/rule:
-	cd /home/SGM/dev/Nexus/clap_plugin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/clap-build/CMakeFiles/clap-tests.dir/rule
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _deps/clap-build/CMakeFiles/clap-tests.dir/rule
 .PHONY : _deps/clap-build/CMakeFiles/clap-tests.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ clap-tests: _deps/clap-build/CMakeFiles/clap-tests.dir/rule
 
 # fast build rule for target.
 clap-tests/fast:
-	cd /home/SGM/dev/Nexus/clap_plugin/build && $(MAKE) $(MAKESILENT) -f _deps/clap-build/CMakeFiles/clap-tests.dir/build.make _deps/clap-build/CMakeFiles/clap-tests.dir/build
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build && $(MAKE) $(MAKESILENT) -f _deps/clap-build/CMakeFiles/clap-tests.dir/build.make _deps/clap-build/CMakeFiles/clap-tests.dir/build
 .PHONY : clap-tests/fast
 
 # Help Target
@@ -199,6 +199,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/SGM/dev/Nexus/clap_plugin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

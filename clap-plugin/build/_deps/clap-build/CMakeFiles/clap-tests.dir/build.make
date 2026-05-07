@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/SGM/dev/Nexus/clap_plugin
+CMAKE_SOURCE_DIR = /var/home/SGM/dev/Nexus-Plugins/clap-plugin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/SGM/dev/Nexus/clap_plugin/build
+CMAKE_BINARY_DIR = /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build
 
 # Utility rule file for clap-tests.
 
@@ -77,10 +77,10 @@ _deps/clap-build/CMakeFiles/clap-tests.dir/build: clap-tests
 .PHONY : _deps/clap-build/CMakeFiles/clap-tests.dir/build
 
 _deps/clap-build/CMakeFiles/clap-tests.dir/clean:
-	cd /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build && $(CMAKE_COMMAND) -P CMakeFiles/clap-tests.dir/cmake_clean.cmake
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build && $(CMAKE_COMMAND) -P CMakeFiles/clap-tests.dir/cmake_clean.cmake
 .PHONY : _deps/clap-build/CMakeFiles/clap-tests.dir/clean
 
 _deps/clap-build/CMakeFiles/clap-tests.dir/depend:
-	cd /home/SGM/dev/Nexus/clap_plugin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/SGM/dev/Nexus/clap_plugin /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-src /home/SGM/dev/Nexus/clap_plugin/build /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build/CMakeFiles/clap-tests.dir/DependInfo.cmake "--color=$(COLOR)" clap-tests
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /var/home/SGM/dev/Nexus-Plugins/clap-plugin /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-src /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build/CMakeFiles/clap-tests.dir/DependInfo.cmake "--color=$(COLOR)" clap-tests
 .PHONY : _deps/clap-build/CMakeFiles/clap-tests.dir/depend
 

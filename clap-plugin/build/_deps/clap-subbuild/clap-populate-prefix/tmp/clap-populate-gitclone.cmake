@@ -3,11 +3,11 @@
 
 cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 
-if(EXISTS "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitclone-lastrun.txt" AND EXISTS "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitinfo.txt" AND
-  "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitinfo.txt")
+if(EXISTS "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitclone-lastrun.txt" AND EXISTS "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitinfo.txt" AND
+  "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitinfo.txt")
   message(VERBOSE
     "Avoiding repeated git clone, stamp file is up to date: "
-    "'/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitclone-lastrun.txt'"
+    "'/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitclone-lastrun.txt'"
   )
   return()
 endif()
@@ -22,12 +22,12 @@ else()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E rm -rf "/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-src"
+  COMMAND ${CMAKE_COMMAND} -E rm -rf "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: '/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-src'")
+  message(FATAL_ERROR "Failed to remove directory: '/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-src'")
 endif()
 
 # try the clone 3 times in case there is an odd git clone issue
@@ -37,7 +37,7 @@ while(error_code AND number_of_tries LESS 3)
   execute_process(
     COMMAND "/usr/bin/git"
             clone --no-checkout --depth 1 --no-single-branch --config "advice.detachedHead=false" "https://github.com/free-audio/clap.git" "clap-src"
-    WORKING_DIRECTORY "/home/SGM/dev/Nexus/clap_plugin/build/_deps"
+    WORKING_DIRECTORY "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
@@ -53,7 +53,7 @@ endif()
 execute_process(
   COMMAND "/usr/bin/git"
           checkout "1.2.2" --
-  WORKING_DIRECTORY "/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-src"
+  WORKING_DIRECTORY "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-src"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
@@ -66,22 +66,22 @@ if(init_submodules)
   execute_process(
     COMMAND "/usr/bin/git" 
             submodule update --recursive --init 
-    WORKING_DIRECTORY "/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-src"
+    WORKING_DIRECTORY "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-src"
     RESULT_VARIABLE error_code
     ${maybe_show_command}
   )
 endif()
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: '/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-src'")
+  message(FATAL_ERROR "Failed to update submodules in: '/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-src'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E copy "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitinfo.txt" "/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitclone-lastrun.txt"
+  COMMAND ${CMAKE_COMMAND} -E copy "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitinfo.txt" "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitclone-lastrun.txt"
   RESULT_VARIABLE error_code
   ${maybe_show_command}
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitclone-lastrun.txt'")
 endif()

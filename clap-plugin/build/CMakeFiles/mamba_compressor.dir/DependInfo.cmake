@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/SGM/dev/Nexus/clap_plugin/src/mamba_compressor.cpp" "CMakeFiles/mamba_compressor.dir/src/mamba_compressor.cpp.o" "gcc" "CMakeFiles/mamba_compressor.dir/src/mamba_compressor.cpp.o.d"
+  "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/src/mamba_compressor.cpp" "CMakeFiles/mamba_compressor.dir/src/mamba_compressor.cpp.o" "gcc" "CMakeFiles/mamba_compressor.dir/src/mamba_compressor.cpp.o.d"
   "" "MambaCompressor.clap" "gcc" "CMakeFiles/mamba_compressor.dir/link.d"
   )
 

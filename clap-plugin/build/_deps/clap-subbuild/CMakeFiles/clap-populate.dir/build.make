@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild
+CMAKE_SOURCE_DIR = /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild
+CMAKE_BINARY_DIR = /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild
 
 # Utility rule file for clap-populate.
 
@@ -77,60 +77,60 @@ CMakeFiles/clap-populate-complete: clap-populate-prefix/src/clap-populate-stamp/
 CMakeFiles/clap-populate-complete: clap-populate-prefix/src/clap-populate-stamp/clap-populate-build
 CMakeFiles/clap-populate-complete: clap-populate-prefix/src/clap-populate-stamp/clap-populate-install
 CMakeFiles/clap-populate-complete: clap-populate-prefix/src/clap-populate-stamp/clap-populate-test
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'clap-populate'"
-	/usr/bin/cmake -E make_directory /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles
-	/usr/bin/cmake -E touch /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles/clap-populate-complete
-	/usr/bin/cmake -E touch /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-done
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Completed 'clap-populate'"
+	/usr/bin/cmake -E make_directory /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/CMakeFiles
+	/usr/bin/cmake -E touch /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/CMakeFiles/clap-populate-complete
+	/usr/bin/cmake -E touch /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-done
 
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-update:
 .PHONY : clap-populate-prefix/src/clap-populate-stamp/clap-populate-update
 
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-build: clap-populate-prefix/src/clap-populate-stamp/clap-populate-configure
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'clap-populate'"
-	cd /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build && /usr/bin/cmake -E echo_append
-	cd /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build && /usr/bin/cmake -E touch /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'clap-populate'"
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build && /usr/bin/cmake -E echo_append
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build && /usr/bin/cmake -E touch /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-build
 
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-configure: clap-populate-prefix/tmp/clap-populate-cfgcmd.txt
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-configure: clap-populate-prefix/src/clap-populate-stamp/clap-populate-patch
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'clap-populate'"
-	cd /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build && /usr/bin/cmake -E echo_append
-	cd /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build && /usr/bin/cmake -E touch /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-configure
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "No configure step for 'clap-populate'"
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build && /usr/bin/cmake -E echo_append
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build && /usr/bin/cmake -E touch /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-configure
 
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-download: clap-populate-prefix/src/clap-populate-stamp/clap-populate-gitinfo.txt
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-download: clap-populate-prefix/src/clap-populate-stamp/clap-populate-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'clap-populate'"
-	cd /home/SGM/dev/Nexus/clap_plugin/build/_deps && /usr/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/tmp/clap-populate-gitclone.cmake
-	cd /home/SGM/dev/Nexus/clap_plugin/build/_deps && /usr/bin/cmake -E touch /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-download
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'clap-populate'"
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps && /usr/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/tmp/clap-populate-gitclone.cmake
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps && /usr/bin/cmake -E touch /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-download
 
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-install: clap-populate-prefix/src/clap-populate-stamp/clap-populate-build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'clap-populate'"
-	cd /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build && /usr/bin/cmake -E echo_append
-	cd /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build && /usr/bin/cmake -E touch /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-install
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "No install step for 'clap-populate'"
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build && /usr/bin/cmake -E echo_append
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build && /usr/bin/cmake -E touch /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-install
 
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-mkdir:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'clap-populate'"
-	/usr/bin/cmake -Dcfgdir= -P /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/tmp/clap-populate-mkdirs.cmake
-	/usr/bin/cmake -E touch /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-mkdir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Creating directories for 'clap-populate'"
+	/usr/bin/cmake -Dcfgdir= -P /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/tmp/clap-populate-mkdirs.cmake
+	/usr/bin/cmake -E touch /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-mkdir
 
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-patch: clap-populate-prefix/src/clap-populate-stamp/clap-populate-patch-info.txt
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-patch: clap-populate-prefix/src/clap-populate-stamp/clap-populate-update
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'clap-populate'"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "No patch step for 'clap-populate'"
 	/usr/bin/cmake -E echo_append
-	/usr/bin/cmake -E touch /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-patch
+	/usr/bin/cmake -E touch /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-patch
 
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-update:
 .PHONY : clap-populate-prefix/src/clap-populate-stamp/clap-populate-update
 
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-test: clap-populate-prefix/src/clap-populate-stamp/clap-populate-install
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'clap-populate'"
-	cd /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build && /usr/bin/cmake -E echo_append
-	cd /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build && /usr/bin/cmake -E touch /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-test
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'clap-populate'"
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build && /usr/bin/cmake -E echo_append
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build && /usr/bin/cmake -E touch /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/src/clap-populate-stamp/clap-populate-test
 
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-update: clap-populate-prefix/tmp/clap-populate-gitupdate.cmake
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-update: clap-populate-prefix/src/clap-populate-stamp/clap-populate-update-info.txt
 clap-populate-prefix/src/clap-populate-stamp/clap-populate-update: clap-populate-prefix/src/clap-populate-stamp/clap-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'clap-populate'"
-	cd /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-src && /usr/bin/cmake -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/tmp/clap-populate-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'clap-populate'"
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-src && /usr/bin/cmake -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/tmp/clap-populate-gitupdate.cmake
 
 CMakeFiles/clap-populate.dir/codegen:
 .PHONY : CMakeFiles/clap-populate.dir/codegen
@@ -157,6 +157,6 @@ CMakeFiles/clap-populate.dir/clean:
 .PHONY : CMakeFiles/clap-populate.dir/clean
 
 CMakeFiles/clap-populate.dir/depend:
-	cd /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild /var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/CMakeFiles/clap-populate.dir/DependInfo.cmake "--color=$(COLOR)" clap-populate
+	cd /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/CMakeFiles/clap-populate.dir/DependInfo.cmake "--color=$(COLOR)" clap-populate
 .PHONY : CMakeFiles/clap-populate.dir/depend
 

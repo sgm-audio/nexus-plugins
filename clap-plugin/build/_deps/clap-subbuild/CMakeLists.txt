@@ -28,8 +28,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(clap-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/free-audio/clap.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "1.2.2" "GIT_SHALLOW" "TRUE"
-                    SOURCE_DIR          "/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-src"
-                    BINARY_DIR          "/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build"
+                    SOURCE_DIR          "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-src"
+                    BINARY_DIR          "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

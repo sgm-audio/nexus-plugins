@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dmamba_compressor_EXPORTS
 
-CXX_INCLUDES = -I/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-src/include
+CXX_INCLUDES = -I/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-src/include
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -fPIC -O3 -march=native -ffast-math -Wall -Wextra -Wno-unused-parameter
 

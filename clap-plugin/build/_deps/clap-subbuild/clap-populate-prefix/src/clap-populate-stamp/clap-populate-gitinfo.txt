@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/var/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-subbuild/clap-populate-prefix/tmp/clap-populate-gitclone.cmake
-source_dir=/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-src
-work_dir=/home/SGM/dev/Nexus/clap_plugin/build/_deps
+command=/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-subbuild/clap-populate-prefix/tmp/clap-populate-gitclone.cmake
+source_dir=/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-src
+work_dir=/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps
 repository=https://github.com/free-audio/clap.git
 remote=origin
 init_submodules=TRUE

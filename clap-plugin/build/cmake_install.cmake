@@ -1,4 +1,4 @@
-# Install script for directory: /home/SGM/dev/Nexus/clap_plugin
+# Install script for directory: /var/home/SGM/dev/Nexus-Plugins/clap-plugin
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build/cmake_install.cmake")
+  include("/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -62,7 +62,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/SGM/.clap" TYPE MODULE FILES "/home/SGM/dev/Nexus/clap_plugin/build/MambaCompressor.clap")
+  file(INSTALL DESTINATION "/home/SGM/.clap" TYPE MODULE FILES "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/MambaCompressor.clap")
   if(EXISTS "$ENV{DESTDIR}/home/SGM/.clap/MambaCompressor.clap" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/home/SGM/.clap/MambaCompressor.clap")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -72,13 +72,13 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/SGM/dev/Nexus/clap_plugin/build/CMakeFiles/mamba_compressor.dir/install-cxx-module-bmi-Release.cmake" OPTIONAL)
+  include("/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/CMakeFiles/mamba_compressor.dir/install-cxx-module-bmi-Release.cmake" OPTIONAL)
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/SGM/dev/Nexus/clap_plugin/build/install_local_manifest.txt"
+  file(WRITE "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -94,6 +94,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/SGM/dev/Nexus/clap_plugin/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

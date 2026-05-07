@@ -1,4 +1,4 @@
-# Install script for directory: /home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-src
+# Install script for directory: /var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,14 +43,14 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-src/include/clap")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-src/include/clap")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/clap/clap-config.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/clap/clap-config.cmake"
-         "/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build/CMakeFiles/Export/8513e00ba0e478bd49fbc6a1ac9bbffd/clap-config.cmake")
+         "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build/CMakeFiles/Export/8513e00ba0e478bd49fbc6a1ac9bbffd/clap-config.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib64/cmake/clap/clap-config-*.cmake")
       if(_cmake_old_config_files)
@@ -63,20 +63,20 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/clap" TYPE FILE FILES "/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build/CMakeFiles/Export/8513e00ba0e478bd49fbc6a1ac9bbffd/clap-config.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/clap" TYPE FILE FILES "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build/CMakeFiles/Export/8513e00ba0e478bd49fbc6a1ac9bbffd/clap-config.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/clap" TYPE FILE FILES "/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build/clap-config-version.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/cmake/clap" TYPE FILE FILES "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build/clap-config-version.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/pkgconfig" TYPE FILE FILES "/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build/clap.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib64/pkgconfig" TYPE FILE FILES "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build/clap.pc")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/SGM/dev/Nexus/clap_plugin/build/_deps/clap-build/install_local_manifest.txt"
+  file(WRITE "/var/home/SGM/dev/Nexus-Plugins/clap-plugin/build/_deps/clap-build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
