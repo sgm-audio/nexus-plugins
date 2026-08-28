@@ -1,0 +1,29 @@
+build/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+.eggs/
+*.so
+*.clap
+*.vst3
+*.a
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+_deps/
+JUCE_build/
+JuceLibraryCode/
+.clangd/
+.cache/
+compile_commands.json
+
+# Build artifacts
+build/
+clap-plugin/build/
+
+# Vendored binaries
+onnxruntime/
+

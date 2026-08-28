@@ -1,47 +1,58 @@
-"""
-Test Stub for ARA Plugin Communicator
-"""
-import logging
-import time
-import queue
+import numpy as np
+import soundfile as sf
+import pytest
 from src.daw_integration.ara_wrapper import AraPluginCommunicator
 
-def test_ara_communicator():
-    logging.basicConfig(level=logging.INFO)
-    logger = logging.getLogger("TestARA")
-    
-    logger.info("Starting ARA Plugin Communicator Test...")
 
-    communicator = AraPluginCommunicator(ipc_name="maaps_test_ipc")
-    communicator.start()
-    
-    try:
-        # 1. Send Handshake
-        logger.info("Sending 'handshake' request...")
-        communicator.send_mock_request({"type": "handshake"})
-        resp = communicator.get_mock_response(timeout=1.0)
-        logger.info(f"Response: {resp}")
-        assert resp is not None
-        assert resp["status"] == "ok"
-        assert "version" in resp
-        
-        # 2. Send Analyze Region
-        logger.info("Sending 'analyze_region' request...")
-        communicator.send_mock_request({
-            "type": "analyze_region",
-            "audio_source_id": "track_123",
-            "start": 0.0,
-            "duration": 10.0
-        })
-        resp = communicator.get_mock_response(timeout=1.0)
-        logger.info(f"Response: {resp}")
-        assert resp is not None
-        assert resp["status"] == "ok"
-        assert "job_id" in resp
+@pytest.fixture
+def audio_file(tmp_path):
+    sr = 22050
+    duration = 3.0
+    t = np.linspace(0, duration, int(sr * duration), endpoint=False)
+    y = 0.5 * np.sin(2 * np.pi * 440 * t)
+    path = str(tmp_path / "test_audio.wav")
+    sf.write(path, y, sr)
+    return path
 
-    finally:
-        communicator.stop()
-        logger.info("ARA Test completed.")
 
-if __name__ == "__main__":
-    test_ara_communicator()
+@pytest.fixture
+def communicator():
+    comm = AraPluginCommunicator(ipc_name="maaps_test_ipc_comm")
+    comm.start()
+    yield comm
+    comm.stop()
+
+
+def _send_and_receive(comm, request, timeout=5.0):
+    comm.send_mock_request(request)
+    return comm.get_mock_response(timeout=timeout)
+
+
+def test_handshake(communicator):
+    resp = _send_and_receive(communicator, {"type": "handshake"})
+    assert resp is not None
+    assert resp["status"] == "ok"
+    assert "version" in resp
+
+
+def test_analyze_region_with_audio(communicator, audio_file):
+    resp = _send_and_receive(communicator, {
+        "type": "analyze_region",
+        "audio_source_id": audio_file,
+        "start": 0.0,
+        "duration": 3.0,
+    }, timeout=15.0)
+    assert resp is not None
+    assert resp["status"] == "ok"
+    assert "job_id" in resp
+
+
+def test_analyze_region_bad_source(communicator):
+    resp = _send_and_receive(communicator, {
+        "type": "analyze_region",
+        "audio_source_id": "/nonexistent/audio.wav",
+        "start": 0.0,
+        "duration": 10.0,
+    })
+    assert resp is not None
+    assert resp["status"] == "error"

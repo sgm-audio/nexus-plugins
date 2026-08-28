@@ -411,8 +411,12 @@ static void par_flush(const clap_plugin_t* plugin,
         if (hdr->space_id != CLAP_CORE_EVENT_SPACE_ID) continue;
         if (hdr->type == CLAP_EVENT_PARAM_VALUE) {
             const auto* pv = reinterpret_cast<const clap_event_param_value_t*>(hdr);
-            if (pv->param_id < static_cast<clap_id>(P_COUNT))
+            if (pv->param_id < static_cast<clap_id>(P_COUNT)) {
                 s->param_vals[pv->param_id].store(pv->value, std::memory_order_relaxed);
+                // par_flush runs on the main thread — notify host directly if latency changed
+                if (pv->param_id == P_LOOKAHEAD && s->host_latency)
+                    s->host_latency->changed(s->host);
+            }
         }
     }
 }
@@ -437,6 +441,36 @@ static uint32_t lat_get(const clap_plugin_t* plugin) {
 static const clap_plugin_latency_t kExtLatency = { .get = lat_get };
 
 // ============================================================
+// Extension: State (preset save / load)
+// ============================================================
+
+static bool state_save(const clap_plugin_t* plugin, const clap_ostream_t* stream) {
+    auto* s = self(plugin);
+    double buf[P_COUNT];
+    for (clap_id i = 0; i < P_COUNT; ++i)
+        buf[i] = s->param_vals[i].load(std::memory_order_relaxed);
+    int64_t bytes = static_cast<int64_t>(sizeof(buf));
+    return stream->write(stream, buf, bytes) == bytes;
+}
+
+static bool state_load(const clap_plugin_t* plugin, const clap_istream_t* stream) {
+    auto* s = self(plugin);
+    double buf[P_COUNT];
+    int64_t bytes = static_cast<int64_t>(sizeof(buf));
+    if (stream->read(stream, buf, bytes) != bytes) return false;
+    for (clap_id i = 0; i < P_COUNT; ++i) {
+        double v = std::clamp(buf[i], kParams[i].min_val, kParams[i].max_val);
+        s->param_vals[i].store(v, std::memory_order_relaxed);
+    }
+    return true;
+}
+
+static const clap_plugin_state_t kExtState = {
+    .save = state_save,
+    .load = state_load,
+};
+
+// ============================================================
 // get_extension dispatch
 // ============================================================
 
@@ -444,6 +478,7 @@ static const void* on_get_extension(const clap_plugin_t*, const char* id) {
     if (!std::strcmp(id, CLAP_EXT_AUDIO_PORTS)) return &kExtAudioPorts;
     if (!std::strcmp(id, CLAP_EXT_PARAMS))      return &kExtParams;
     if (!std::strcmp(id, CLAP_EXT_LATENCY))     return &kExtLatency;
+    if (!std::strcmp(id, CLAP_EXT_STATE))       return &kExtState;
     return nullptr;
 }
 
