@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  clap-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install system deps
+        run: sudo apt-get update && sudo apt-get install -y ninja-build libx11-dev libasound2-dev libxcursor-dev libxrandr-dev libxinerama-dev libxi-dev
+      - name: Build CLAP plugin
+        run: |
+          cmake -S clap-plugin -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
+          cmake --build build
+
+  ara-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          cd ara-extension
+          pip install -r requirements.txt pytest
+      - name: Run ARA tests
+        run: |
+          cd ara-extension
+          pytest -q
