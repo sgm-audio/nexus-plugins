@@ -27,3 +27,9 @@ clap-plugin/build/
 # Vendored binaries
 onnxruntime/
 
+
+# Local tool and agent files
+AGENTS.md
+CLAUDE.md
+.claude/
+.cursor/
